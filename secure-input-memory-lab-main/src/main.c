@@ -26,10 +26,8 @@ int main(void)
     }
 
     session_print(session);
+	printf("Goodbye %s\n", username);
     session_destroy(session);
-
-    printf("Goodbye %s\n", username);
-
-    free(username);
+    
     return 0;
 }
