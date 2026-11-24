@@ -28,6 +28,8 @@ int main(void)
     session_print(session);
 	printf("Goodbye %s\n", username);
     session_destroy(session);
+	/*removed free, cause the double free , username pointer is freed at session destroy 
+	* as for printing giidbey before the end of session , so no user after free occure*/
     
     return 0;
 }
